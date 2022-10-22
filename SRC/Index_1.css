@@ -1,0 +1,77 @@
+#POST_Job {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    right: 20 px;
+    position: absolute;
+    left: 47%;
+    top: 10%;
+}
+
+#About_us {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    right: 20 px;
+    position: absolute;
+    left: 60%;
+    top: 10%;
+
+
+
+}#Login {
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  right: 20 px;
+  position: absolute;
+  left: 73%;
+  top: 10%;
+}
+#Signup {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    right: 20 px;
+    position: absolute;
+    left: 83%;
+    top: 10%;
+}
+
+
+#Allegro {
+  height: 80px;
+
+  object-position: left bottom;
+  position: absolute;
+  top: 3%;
+  left: 9%;
+  height: 20%;
+}
+
+
+
+
+body {
+    background-color: #DBF9FC;
+}
