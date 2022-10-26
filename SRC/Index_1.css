@@ -42,6 +42,7 @@
   position: absolute;
   left: 73%;
   top: 10%;
+ 
 }
 #Signup {
     background-color: #4caf50;
@@ -59,7 +60,7 @@
 }
 
 
-#Allegro {
+#Jobs {
   height: 80px;
 
   object-position: left bottom;
@@ -69,9 +70,34 @@
   height: 20%;
 }
 
-
-
-
 body {
     background-color: #DBF9FC;
 }
+
+
+
+
+.split {
+  height: 60%;
+  width: 90%;
+  position: fixed;
+  z-index: 1;
+  top: 30%;
+  overflow-x: hidden;
+  padding-top: 20px;
+  background-color: rgb(177, 208, 208);
+  left: 65px;
+}
+.center{
+  display:flex;
+  justify-content: center;
+}
+#signup{
+  margin-top:20px;
+  line-break: 20px;
+}
+
+
+
+
+
