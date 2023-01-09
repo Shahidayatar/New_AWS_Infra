@@ -5,18 +5,6 @@ import { useState } from 'react';
 
 let array = ['Post A Job', 'Login', 'Signup', 'About Us'];
 
-// function Button(props) {
-
-//   array.forEach((element) => {
-
-//       var btn = document.createElement('button'); btn.innerHTML = element;
-//       document.body.appendChild(btn);
-
-//   });
-// }
-
-// eslint-disable-next-line react-hooks/rules-of-hooks
-
 function Button() {
   const [open, close] = useState(false);
   function ClickButton() {
@@ -33,7 +21,7 @@ function Button() {
       <button onClick={CloseButton}> {array[1]}</button>
       <button> {array[2]}</button>
       <button> {array[3]}</button>
-      <div>{open ? <Modal /> : null}</div>;
+      <div> {open ? <Modal></Modal> : null}</div>
     </div>
   );
 

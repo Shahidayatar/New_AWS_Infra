@@ -1,22 +1,10 @@
 .PopUp {
-  height: 550px;
+  height: 80% auto;
   width: 800px;
-
-  background-color: 'yellow';
   background-color: rgb(15, 255, 211);
-  margin-left: 350px;
+  margin-left: 25%;
   margin-top: 30px;
-}
-
-.backdrop {
-  position: fixed;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.75);
-  height: 100%;
-  width: 100%;
-
-  top: 0;
-  left: 0;
+  border: solid 2px;
 }
 form span {
   display: block;
