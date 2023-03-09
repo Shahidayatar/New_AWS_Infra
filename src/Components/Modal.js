@@ -21,7 +21,7 @@ const [formData, setFormData] = useState(false);
     <div>
       <div className="PopUp">
         <form id="form" onSubmit={handleSubmit}>
-          <div id="formitems">
+
             <div id="align">
               <h2 className="">Post A JOB </h2>
 
@@ -110,7 +110,7 @@ const [formData, setFormData] = useState(false);
                 Post a job
               </button>
             </div>
-          </div>
+   
         </form>
       </div>
    
