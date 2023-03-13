@@ -2,13 +2,12 @@
 import './Button.css';
 import Modal from '../Components/Modal';
 import { useState } from 'react';
-import FormOutput from '../Components/FormOutput';
+
 import { useNavigate } from 'react-router-dom';
 
 
 function Button() {
-
-  const navigate = useNavigate(); //used for routing 
+  const navigate = useNavigate(); //used for routing
 
   const [open, close] = useState(false);
   function ClickButton() {
@@ -25,8 +24,9 @@ function Button() {
     navigate('/signup');
   }
   function navToContact() {
-    navigate('/about');
+    navigate('/about'); 
   }
+ 
   return (
     <div>
       <div id="container">
@@ -40,24 +40,19 @@ function Button() {
           Signup
         </button>
         <button id="button_to_nav" onClick={navToContact}>
-          About us 
+          About us
         </button>
+
+        <div>
+          {open ? (
+           <div> <div onClick={CloseButton} className="overlay">    </div>
+              <Modal></Modal>{' '}
+        </div>
+          ) : null}
+        </div>
       </div>
-      <div> {open ? <Modal></Modal> : null}</div>
-      <FormOutput></FormOutput>
     </div>
   );
-  //  return (
-  //    <div>
-  //      <button onClick={() => close(true)}> {array[0]}</button>
-
-  //      <button onClick={() => close(false)}> {array[1]}</button>
-  //      <button> {array[2]}</button>
-  //      <button> {array[3]}</button>
-  //      {open ? <Modal /> : console.log(open.valueOf, close)}
-  //      {open ? <Modal /> : console.log(open, close)}
-  //    </div>
-  //  );
 }
 
 export default Button;

@@ -16,5 +16,9 @@
   background-color: rgba(35, 78, 97, 0.373);
 }
 body {
-background-color: rgb(111, 182, 196)
+   
+scroll-behavior: auto;
+  
+background-color: rgb(111, 182, 196);
+
 }
