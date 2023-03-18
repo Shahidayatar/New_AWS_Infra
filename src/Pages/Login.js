@@ -1,14 +1,12 @@
-import Button from "../Buttons/Button";
+// function Login() {
+//   return (
+//     <div>
+//       <Button></Button>
 
-function Login() {
-  return (
-    <div>
-      <Button></Button>
-      
-       <h3>signup page </h3>
-     
-    </div>
-  );
-}
+//        <h3>signup page </h3>
 
-export default Login;
+//     </div>
+//   );
+// }
+
+// export default Login;
