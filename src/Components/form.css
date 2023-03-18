@@ -7,6 +7,7 @@ form {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   font-family: Arial, sans-serif;
 }
+
 .modalContainer {
   max-width: 700px ;
   height: 500px;
@@ -22,8 +23,9 @@ form {
   border-radius: 10px;
   background-color: red;
   border: 1px; 
-
 }
+
+
 .modalContainer form{
      height: 100%;/* set a fixed height for the form */
   overflow-y: auto;
