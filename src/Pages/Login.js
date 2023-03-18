@@ -1,14 +1,12 @@
-import Layout from '../Layout_button/Layout';
+// function Login() {
+//   return (
+//     <div>
+//       <Button></Button>
 
+//        <h3>signup page </h3>
 
-function Login() {
-  return (
-    <div>
-      <Layout></Layout>
+//     </div>
+//   );
+// }
 
-      <h3>signup page </h3>
-    </div>
-  );
-}
-
-export default Login;
+// export default Login;

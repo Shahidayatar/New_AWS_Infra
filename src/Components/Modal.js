@@ -1,120 +1,122 @@
-import React from 'react';
+import React from "react";
 
-import './Modal.css';
-import './form.css';
-
-import { useState } from 'react';
-import Button from '@mui/material/Button';
-
-import FormOutPut from './FormOutput';
-import { Form } from 'react-router-dom';
+import "./Modal.css";
+import "./form.css";
+import { useState } from "react";
 
 function Modal(props) {
   const [formData, setFormData] = useState(false);
-
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
-    
-
- 
-    
+  };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("working");
+    console.log(formData);
   };
 
-
-
   const handleSubmit = (event) => {
-      event.preventDefault();
-            console.log(formData);
-   return(
-<div>
- 
-     <FormOutPut />;
-   </div>
-   );
-   
-
-
-   
-
-  }
+    event.preventDefault();
+    console.log(formData);
+    return (
+      <div>
+        <FormOutPut />;
+      </div>
+    );
+  };
   return (
     <div>
-      <div className="modalContainer">
-        <form onSubmit={handleSubmit}>
-          <h2>
-            Job Posting
-            <button className="closeBtn">X</button>
-          </h2>
-          <div className="form-group">
-            <label htmlFor="job_title">Job Title</label>
-            <input
-              type="text"
-              id="job_title"
-              name="job_title"
-              onChange={handleChange}
-              required
-            />
+      <div className="PopUp">
+        <form id="form" onSubmit={handleSubmit}>
+          <div id="align">
+            <h2 className="">Post A JOB </h2>
+
+            <div className="formbold-input-flex">
+              <div>
+                <label className="formbold-form-label">Company Name</label>
+                <input
+                  type="text"
+                  name="Company Name"
+                  id="firstname"
+                  className="formbold-form-input"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label className="formbold-form-label"> Job title </label>
+                <input
+                  type="text"
+                  name="Job title"
+                  id="lastname"
+                  className="formbold-form-input"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="formbold-input-flex">
+              <div>
+                <label className="formbold-form-label"> Email </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className="formbold-form-input"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div>
+                <label className="formbold-form-label"> Phone number </label>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  className="formbold-form-input"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <label className="formbold-form-label">Work preference: </label>
+
+              <select name="Work Type" id="workType">
+                <option value="Hybird">Hybird</option>
+                <option value="Remote">Remote</option>
+                <option value="Work from Home">Work from Home</option>
+              </select>
+            </div>
+            <div className="formbold-input-flex">
+              <div>
+                <label className="formbold-form-label">Work Location</label>
+                <input
+                  type="text"
+                  name="work prefernce"
+                  id="firstname"
+                  className="formbold-form-input"
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="formbold-checkbox-wrapper">
+              <label className="formbold-checkbox-label">
+                <input type="checkbox" required />I agree to the defined
+                <a href="https://policies.google.com/privacy?hl=en-US">
+                  terms, conditions, and policies
+                </a>
+              </label>
+            </div>
+
+            <button type="submit" className="formbold-btn">
+              Post a job
+            </button>
           </div>
-          <div className="form-group">
-            <label htmlFor="company_name">Company Name</label>
-            <input
-              type="text"
-              id="company_name"
-              name="company_name"
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="job_description">Job Description</label>
-            <textarea
-              id="job_description"
-              name="job_description"
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <div className="form-group">
-            <label htmlFor="job_requirements">Job Requirements</label>
-            <textarea
-              id="job_requirements"
-              name="job_requirements"
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <div className="form-group">
-            <label htmlFor="job_location">Job Location</label>
-            <input type="text" id="job_location" name="job_location" required />
-          </div>
-          <div className="form-group">
-            <label htmlFor="job_type" name="job type">
-              Job Type
-            </label>
-            <select
-              id="job_type"
-              name="job_type"
-              onChange={handleChange}
-              required
-            >
-              <option value="">--Select--</option>
-              <option>Full-time</option>
-              <option>Part-time</option>
-              <option>Contract</option>
-              <option>Internship</option>
-            </select>
-          </div>
-          <div className="form-group">
-            <label htmlFor="salary">Salary</label>
-            <input
-              type="text"
-              id="salary"
-              name="salary"
-              onChange={handleChange}
-            />
-          </div>
-          <Button variant="contained" type = "submit"  >Post a Job</Button>
         </form>
       </div>
     </div>
