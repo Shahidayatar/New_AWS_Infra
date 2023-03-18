@@ -39,9 +39,9 @@ const Header = () => {
             <div onClick={CloseButton} className="overlay">
              
             </div>
-            <div><Modal></Modal>{' '}</div>
+            <div><Modal></Modal></div>
           </div>
-        ) : null}
+        ) : console.log('not working')}
       </div>
     </div>
   );
