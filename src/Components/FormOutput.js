@@ -1,17 +1,4 @@
-//import Modal from "./Modal";
-
-import './form.css';
-
-function FormOutput() {
-
-    return (
-      <div>
-        <div>
-          <div id="boxs"></div>=
-        </div>
-       
-      </div>
-    );
+function FormOutPut(props) {
+  return <div>{console.log("dj")}</div>;
 }
-
-export default FormOutput;
+export default FormOutPut;

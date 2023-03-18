@@ -15,6 +15,16 @@ function Modal(props) {
     console.log("working");
     console.log(formData);
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(formData);
+    return (
+      <div>
+        <FormOutPut />;
+      </div>
+    );
+  };
   return (
     <div>
       <div className="PopUp">
