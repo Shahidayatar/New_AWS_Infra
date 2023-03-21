@@ -4,18 +4,27 @@ import './header.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Modal from './Modal';
+import FormOutPut from './FormOutPut';
 
 const Header = () => {
   const [open, close] = useState(false);
+  const [formData, setFormData] = useState({});
   const navigate = useNavigate();
 
-  function ClickButton() {
+  const ClickButton = () => {
     close(true);
     navigate('/');
-  }
-   function CloseButton() {
+  };
+  const CloseButton = () => {
     close(false);
-  }
+  };
+
+    const handleFormSubmit = (formData) => {
+    setFormData(formData);
+
+  
+  };
+  
 
   return (
     <div>
@@ -32,16 +41,17 @@ const Header = () => {
         &nbsp;&nbsp;
         <Button variant="contained"> About Us</Button>
       </div>
+     <div>{  <FormOutPut formData={formData} />}</div>
       <div>
         {open ? (
           <div>
-        
-            <div onClick={CloseButton} className="overlay">
-             
-            </div>
-            <div><Modal></Modal></div>
+            <Modal
+              isOpen={open}
+              onClose={CloseButton}
+              onFormSubmit={handleFormSubmit}
+            ></Modal>
           </div>
-        ) : console.log('not working')}
+        ) : null}
       </div>
     </div>
   );
