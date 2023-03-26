@@ -7,22 +7,23 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 
-
 function Modal({ isOpen, onClose, onFormSubmit }) {
   const [formData, setFormData] = useState({});
 
   const handleChange = (event) => {
-  const { name, value } = event.target;
-  setFormData({ ...formData, [name]: value });
+    const { name, value } = event.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-     onFormSubmit(formData); 
-    onClose(); 
-       console.log(formData);
+    onFormSubmit(formData);
+   onClose();
+    console.log(formData);
+  
   };
 
+  
   return (
     <div>
       <div className="overlay" onClick={onClose}></div>
@@ -36,7 +37,6 @@ function Modal({ isOpen, onClose, onFormSubmit }) {
                 id="job-title"
                 label="Job Title"
                 name="job_title"
-                
                 fullWidth
                 onChange={handleChange}
               />
@@ -50,7 +50,6 @@ function Modal({ isOpen, onClose, onFormSubmit }) {
                 id="job-description"
                 label="Job Description"
                 name="job_description"
-               
                 onChange={handleChange}
                 fullWidth
               />
@@ -62,7 +61,6 @@ function Modal({ isOpen, onClose, onFormSubmit }) {
                 id="job-location"
                 label="Job Location"
                 name="job_location"
-              
                 onChange={handleChange}
                 fullWidth
               />
@@ -75,17 +73,15 @@ function Modal({ isOpen, onClose, onFormSubmit }) {
                 id="job-salary"
                 label="Salary"
                 name="job_salary"
-             
                 onChange={handleChange}
                 fullWidth
               />
             </Grid>
           </Grid>
-          <Button variant="contained" type="submit" className="submitButton">
+          <Button variant="contained" type="submit" className="submitButton" >
             Post Job
           </Button>
         </form>
-        
       </div>
     </div>
   );
