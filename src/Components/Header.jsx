@@ -8,7 +8,7 @@ import FormOutPut from './FormOutPut';
 
 const Header = () => {
   const [open, close] = useState(false);
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState([]);
   const navigate = useNavigate();
 
   const ClickButton = () => {
@@ -20,11 +20,11 @@ const Header = () => {
   };
 
     const handleFormSubmit = (formData) => {
-    setFormData(formData);
-
+   
+    setFormData(formData)
   
   };
-  
+
 
   return (
     <div>
@@ -41,7 +41,13 @@ const Header = () => {
         &nbsp;&nbsp;
         <Button variant="contained"> About Us</Button>
       </div>
-     <div>{  <FormOutPut formData={formData} />}</div>
+
+
+
+<div>{<FormOutPut formData={formData} />}</div>
+
+
+      
       <div>
         {open ? (
           <div>

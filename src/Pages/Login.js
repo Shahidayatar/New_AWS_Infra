@@ -1,12 +1,14 @@
-// function Login() {
-//   return (
-//     <div>
-//       <Button></Button>
+import Header from "../Components/Header";
 
-//        <h3>signup page </h3>
+function Login() {
+  return (
+    <div>
+    <Header></Header>
 
-//     </div>
-//   );
-// }
+       <h3>signup page </h3>
 
-// export default Login;
+    </div>
+  );
+}
+
+export default Login;
